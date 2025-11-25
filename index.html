@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texter - Editor de Documentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginModal" class="modal active">
+        <div class="modal-content glass">
+            <h2>Bem-vindo ao Texter</h2>
+            <div class="auth-tabs">
+                <button id="loginTab" class="tab-btn active">Login</button>
+                <button id="signupTab" class="tab-btn">Cadastro</button>
+            </div>
+            <form id="loginForm" class="auth-form">
+                <input type="text" id="loginUsername" placeholder="Nome de usuário" required>
+                <input type="password" id="loginPassword" placeholder="Senha" required>
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            <form id="signupForm" class="auth-form hidden">
+                <input type="text" id="signupUsername" placeholder="Nome de usuário" required>
+                <input type="password" id="signupPassword" placeholder="Senha" required>
+                <input type="password" id="confirmPassword" placeholder="Confirmar senha" required>
+                <button type="submit" class="btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="editorContainer" class="hidden">
+        <nav class="navbar glass">
+            <h1>Texter</h1>
+            <div class="nav-buttons">
+                <button id="newDocBtn" class="btn-secondary">Novo Documento</button>
+                <button id="saveDocBtn" class="btn-secondary">Salvar Documento</button>
+                <button id="logoutBtn" class="btn-danger">Sair</button>
+            </div>
+        </nav>
+        
+        <div class="editor-area glass">
+            <div id="editor" contenteditable="true" class="editor">
+                <h1>Documento Novo</h1>
+                <p>Comece a digitar seu documento aqui...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
